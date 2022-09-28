@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 변경</title>
+    <link href="css/08.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="cont01">
+        <div>
+            <img id="bg_img" src="img/wind-energy-g8ccd6006a_1920.jpg" alt="풍력발전" />
+            <div class="info">
+                <strong>2022.09.26 월요일</strong>
+                <h3>컨텐츠 제목 작성</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At maxime quos voluptas enim corrupti,
+                    doloremque, hic velit, nesciunt ex est et ut provident molestias totam doloribus excepturi id
+                    laborum debitis.</p>
+                <button id="btn">
+                    이미지보기
+                    <span id="num_text">1</span>/3
+                </button>
+            </div><!-- .info end -->
+        </div>
+    </section><!-- .cont01 end -->
+
+    <script>
+        let btn = document.getElementById('btn');
+        let sectionImg = document.getElementById('bg_img');
+        let numText = document.getElementById('num_text');
+
+        let img1 = 'img/wind-energy-g8ccd6006a_1920.jpg';
+        let img2 = 'img/dell-7Bmk9mAXP2I-unsplash.jpg';
+        let img3 = 'img/komarov-egor-naVnuQTEdvU-unsplash.jpg';
+        let imgList = [img1, img2, img3]; //이미지경로 배열
+        let numList = [1, 2, 3]; //이미지번호 배열
+
+        let i = 0;
+        let num = 0;
+
+        btn.onclick = function () {
+            i++;
+            num++;
+            console.log(i); //개발가도구(검사)-콘솔에서 확인가능
+            if (i >= imgList.length) {
+                i = 0;
+                num = 0;
+            }
+            sectionImg.src = imgList[i]; //이미지 경로
+            numText.innerText = numList[num]; //이미지 번호
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+}
+
+.cont01 {
+    background-color: rgb(110, 163, 121);
+    height: 100vh;
+
+    display: flex;
+    /* align-items을 이용하기 위해 정의 */
+    align-items: center;
+    /* height의 가운데 수직정렬 */
+}
+
+.cont01>div {
+    max-width: 1280px;
+    /* 보다 작아지면 아래 스크롤바 생김 */
+    width: 95%;
+    /* 아래 스크롤바 생기지 않도록 */
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    /* img 이미지와 info 내용이 함께 수직정렬 */
+    /* align-items: end; img 이미지와 info 내용이 함께 맨아래로 정렬*/
+}
+
+.cont01>div img {
+    width: 50%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.cont01>div .info {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.cont01>div .info strong {}
+
+.cont01>div .info h3 {
+    /* 여백(margin): 위로 5px 아래로 15px */
+    /* 글자크기: 25px */
+    margin: 5px 0 15px 0;
+    /* margin: 5px 위 0 좌우 15px 아래; */
+    font-size: 25px;
+}
+
+.cot01>div .info p {}
+
+.cont01>div .info button {
+    height: 40px;
+    padding: 0 30px;
+    /* 내부로 상하 0 좌우 30px 떨어짐 */
+    border: 0;
+    background-color: orangered;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 40px;
+    /* 위쪽에서 40px만 잡아 주겠다. */
+    cursor: pointer;
+}
+
+/* 반응형 */
+/* 화면의 크기가 1024px이하일 때 */
+@media screen and (max-width:1024px) {
+    .cont01>div {
+        display: block;
+    }
+
+    .cont01>div img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    /* info한테
+    width: 100%;
+    좌측공간 없애기 */
+    .cont01>div .info {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}

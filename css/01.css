@@ -1,0 +1,57 @@
+@charset "uft-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #333;
+    line-height: 1;
+}
+
+.main_visual{
+    /* width: 100vh; */
+    height: 100vh;/* 브라우저 높이에 맞춰서 */
+    position: relative;
+}
+
+.main_visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;/* 맨아래 틈 없애기 / 상하스크롤 없어짐. */
+}
+
+/* 동일표현
+.main_visual > btn{}
+.main_visual #btn{} 
+*/
+
+.main_visual #btn{  
+    /* 
+    가로 : 100px
+    세로 : 100px
+    정원형 만들기
+    테두리 : 0
+    배경컬러
+    글자색상
+    이미지위에 버튼 올리기
+    아래쪽에서 50px
+    수평 가운데 배치하기
+     */
+
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     border: 0;
+
+     background-color: #fff;
+     position: absolute;
+     bottom: 50px;
+     left: 50%;
+     transform: translate(-50px);
+
+}
+
